@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40401D7A130ED39600D9CADE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40401D79130ED39600D9CADE /* UIKit.framework */; };
+		40401D7C130ED39600D9CADE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40401D7B130ED39600D9CADE /* Foundation.framework */; };
+		40401D7E130ED39600D9CADE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40401D7D130ED39600D9CADE /* CoreGraphics.framework */; };
+		40401D84130ED39600D9CADE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 40401D82130ED39600D9CADE /* InfoPlist.strings */; };
+		40401D87130ED39600D9CADE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40401D86130ED39600D9CADE /* main.m */; };
+		40401D8A130ED39600D9CADE /* BubbleViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40401D89130ED39600D9CADE /* BubbleViewAppDelegate.m */; };
+		40401D8D130ED39600D9CADE /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40401D8B130ED39600D9CADE /* MainWindow.xib */; };
+		40401D90130ED39600D9CADE /* BubbleViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40401D8F130ED39600D9CADE /* BubbleViewViewController.m */; };
+		40401D93130ED39600D9CADE /* BubbleViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40401D91130ED39600D9CADE /* BubbleViewViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		40401D75130ED39600D9CADE /* BubbleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40401D79130ED39600D9CADE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		40401D7B130ED39600D9CADE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		40401D7D130ED39600D9CADE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		40401D81130ED39600D9CADE /* BubbleView-Info.plist */ = {isa = PBXFileReference; path = "BubbleView-Info.plist"; sourceTree = "<group>"; };
+		40401D83130ED39600D9CADE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		40401D85130ED39600D9CADE /* BubbleView-Prefix.pch */ = {isa = PBXFileReference; path = "BubbleView-Prefix.pch"; sourceTree = "<group>"; };
+		40401D86130ED39600D9CADE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		40401D88130ED39600D9CADE /* BubbleViewAppDelegate.h */ = {isa = PBXFileReference; path = BubbleViewAppDelegate.h; sourceTree = "<group>"; };
+		40401D89130ED39600D9CADE /* BubbleViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleViewAppDelegate.m; sourceTree = "<group>"; };
+		40401D8C130ED39600D9CADE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		40401D8E130ED39600D9CADE /* BubbleViewViewController.h */ = {isa = PBXFileReference; path = BubbleViewViewController.h; sourceTree = "<group>"; };
+		40401D8F130ED39600D9CADE /* BubbleViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleViewViewController.m; sourceTree = "<group>"; };
+		40401D92130ED39600D9CADE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BubbleViewViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40401D72130ED39600D9CADE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40401D7A130ED39600D9CADE /* UIKit.framework in Frameworks */,
+				40401D7C130ED39600D9CADE /* Foundation.framework in Frameworks */,
+				40401D7E130ED39600D9CADE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40401D6A130ED39600D9CADE = {
+			isa = PBXGroup;
+			children = (
+				40401D7F130ED39600D9CADE /* BubbleView */,
+				40401D78130ED39600D9CADE /* Frameworks */,
+				40401D76130ED39600D9CADE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		40401D76130ED39600D9CADE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40401D75130ED39600D9CADE /* BubbleView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40401D78130ED39600D9CADE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40401D79130ED39600D9CADE /* UIKit.framework */,
+				40401D7B130ED39600D9CADE /* Foundation.framework */,
+				40401D7D130ED39600D9CADE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40401D7F130ED39600D9CADE /* BubbleView */ = {
+			isa = PBXGroup;
+			children = (
+				40401D88130ED39600D9CADE /* BubbleViewAppDelegate.h */,
+				40401D89130ED39600D9CADE /* BubbleViewAppDelegate.m */,
+				40401D8B130ED39600D9CADE /* MainWindow.xib */,
+				40401D8E130ED39600D9CADE /* BubbleViewViewController.h */,
+				40401D8F130ED39600D9CADE /* BubbleViewViewController.m */,
+				40401D91130ED39600D9CADE /* BubbleViewViewController.xib */,
+				40401D80130ED39600D9CADE /* Supporting Files */,
+			);
+			path = BubbleView;
+			sourceTree = "<group>";
+		};
+		40401D80130ED39600D9CADE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40401D81130ED39600D9CADE /* BubbleView-Info.plist */,
+				40401D82130ED39600D9CADE /* InfoPlist.strings */,
+				40401D85130ED39600D9CADE /* BubbleView-Prefix.pch */,
+				40401D86130ED39600D9CADE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40401D74130ED39600D9CADE /* BubbleView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40401D96130ED39600D9CADE /* Build configuration list for PBXNativeTarget "BubbleView" */;
+			buildPhases = (
+				40401D71130ED39600D9CADE /* Sources */,
+				40401D72130ED39600D9CADE /* Frameworks */,
+				40401D73130ED39600D9CADE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BubbleView;
+			productName = BubbleView;
+			productReference = 40401D75130ED39600D9CADE /* BubbleView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40401D6C130ED39600D9CADE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Mikael Hallendal";
+			};
+			buildConfigurationList = 40401D6F130ED39600D9CADE /* Build configuration list for PBXProject "BubbleView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 40401D6A130ED39600D9CADE;
+			productRefGroup = 40401D76130ED39600D9CADE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				40401D74130ED39600D9CADE /* BubbleView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40401D73130ED39600D9CADE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40401D84130ED39600D9CADE /* InfoPlist.strings in Resources */,
+				40401D8D130ED39600D9CADE /* MainWindow.xib in Resources */,
+				40401D93130ED39600D9CADE /* BubbleViewViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40401D71130ED39600D9CADE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40401D87130ED39600D9CADE /* main.m in Sources */,
+				40401D8A130ED39600D9CADE /* BubbleViewAppDelegate.m in Sources */,
+				40401D90130ED39600D9CADE /* BubbleViewViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		40401D82130ED39600D9CADE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40401D83130ED39600D9CADE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		40401D8B130ED39600D9CADE /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40401D8C130ED39600D9CADE /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		40401D91130ED39600D9CADE /* BubbleViewViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40401D92130ED39600D9CADE /* en */,
+			);
+			name = BubbleViewViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40401D94130ED39600D9CADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		40401D95130ED39600D9CADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		40401D97130ED39600D9CADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BubbleView/BubbleView-Prefix.pch";
+				INFOPLIST_FILE = "BubbleView/BubbleView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		40401D98130ED39600D9CADE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BubbleView/BubbleView-Prefix.pch";
+				INFOPLIST_FILE = "BubbleView/BubbleView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40401D6F130ED39600D9CADE /* Build configuration list for PBXProject "BubbleView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40401D94130ED39600D9CADE /* Debug */,
+				40401D95130ED39600D9CADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40401D96130ED39600D9CADE /* Build configuration list for PBXNativeTarget "BubbleView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40401D97130ED39600D9CADE /* Debug */,
+				40401D98130ED39600D9CADE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40401D6C130ED39600D9CADE /* Project object */;
+}
