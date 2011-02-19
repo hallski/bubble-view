@@ -43,15 +43,15 @@
 
 - (void)addContentView
 {
-    UIView *view = [[[UIView alloc] initWithFrame:[self contentFrame]] autorelease];
+    UILabel *label = [[[UILabel alloc] initWithFrame:[self contentFrame]] autorelease];
     
-    view.backgroundColor = [UIColor whiteColor];
-    
-    view.layer.cornerRadius = 5.0;
-    view.layer.borderColor = [UIColor blackColor].CGColor;
-    view.layer.borderWidth = 1.0;
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont fontWithName:@"Helvetica Neue" size:24];
+    label.text = @"ImageBubbleView";
+    label.textAlignment = UITextAlignmentCenter;
 
-    [self addSubview:view];
+    [self addSubview:label];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder

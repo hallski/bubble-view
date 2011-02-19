@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface BubbleViewViewController : UIViewController {
-    
+@private
+    UIView *currentBubbleView;
 }
+- (IBAction)buttonPressed:(id)sender;
 
 @end

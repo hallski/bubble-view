@@ -7,6 +7,7 @@
 //
 
 #import "BubbleViewViewController.h"
+#import "DrawnBubbleView.h"
 
 @implementation BubbleViewViewController
 
@@ -46,4 +47,36 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)showBubbleViewWithActivationFrame:(CGRect)activationFrame
+{
+    currentBubbleView = [[DrawnBubbleView alloc] initWithHeight:150
+                                                activationFrame:activationFrame];
+    currentBubbleView.alpha = 0.0;
+    [self.view addSubview:currentBubbleView];
+   
+    [UIView animateWithDuration:0.3
+                     animations:^{
+                         currentBubbleView.alpha = 1;
+                     }
+     ];
+}
+
+- (IBAction)buttonPressed:(id)sender 
+{
+    if (currentBubbleView) {
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             currentBubbleView.alpha = 0;
+                         }
+                         completion:^(BOOL finished){
+                             //self.contentView.layer.shouldRasterize = NO;
+                             [currentBubbleView removeFromSuperview];
+                             [currentBubbleView release];
+                             [self showBubbleViewWithActivationFrame:((UIView *)sender).frame];
+                         }
+         ];
+    } else {
+        [self showBubbleViewWithActivationFrame:((UIView *)sender).frame];
+    }
+}
 @end

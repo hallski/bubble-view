@@ -13,12 +13,27 @@
 #define VERTICAL_PADDING 5
 #define ARROW_HEIGHT 20
 #define ARROW_WIDTH 40
-#define ARROW_POSITION 60
+#define DEFAULT_ARROW_POSITION 60
+#define CORNER_RADIUS 10
+#define ACTIVATION_PADDING 0
+
+CGFloat clamp(CGFloat value, CGFloat minValue, CGFloat maxValue) 
+{
+    if (value < minValue) {
+        return minValue;
+    }
+    
+    if (value > maxValue) {
+        return maxValue;
+    }
+    
+    return value;
+}
 
 @implementation DrawnBubbleView
-@synthesize gradientStartColor;
-@synthesize gradientEndColor;
-@synthesize borderColor;
+@synthesize gradientStartColor = _gradientStartColor;
+@synthesize gradientEndColor = _gradientEndColor;
+@synthesize borderColor = _borderColor;
 
 - (CGRect)bubbleFrame
 {
@@ -29,13 +44,38 @@
     return frame;
 }
 
+- (CGFloat)minArrowPosition
+{
+    return CGRectGetMinX([self bubbleFrame]) + ARROW_WIDTH / 2 + CORNER_RADIUS;
+}
+
+- (CGFloat)maxArrowPosition
+{
+    return CGRectGetMaxX([self bubbleFrame]) - ARROW_WIDTH / 2 - CORNER_RADIUS;
+}
+
+- (CGFloat)arrowPosition
+{
+    if (CGRectIsEmpty(_activationFrame)) {
+        return DEFAULT_ARROW_POSITION;
+    }
+    
+    return clamp(CGRectGetMidX(_activationFrame), [self minArrowPosition], [self maxArrowPosition]);
+}
+
+- (CGPoint)arrowMiddleBase
+{
+    CGRect bubbleFrame = [self bubbleFrame];
+    return CGPointMake(CGRectGetMinX(bubbleFrame) + [self arrowPosition], CGRectGetMinY(bubbleFrame));
+}
+
 - (UIBezierPath *)bubblePathWithRoundedCornerRadius:(CGFloat)cornerRadius
 {
     UIBezierPath *path = [UIBezierPath bezierPath];
 
     CGRect bubbleFrame = [self bubbleFrame];
-    CGPoint arrowMiddleBase = CGPointMake(bubbleFrame.origin.x + ARROW_POSITION, bubbleFrame.origin.y);
-    
+    CGPoint arrowMiddleBase = CGPointMake([self arrowPosition], bubbleFrame.origin.y);
+
     // Start at the arrow
     [path moveToPoint:CGPointMake(arrowMiddleBase.x - ARROW_WIDTH / 2, arrowMiddleBase.y)];
     [path addLineToPoint:CGPointMake(arrowMiddleBase.x, arrowMiddleBase.y - ARROW_HEIGHT)];
@@ -112,23 +152,70 @@
     return bubbleLayer;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (CGRect)labelFrame
 {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        self.borderColor = [UIColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1.0];
-        self.gradientStartColor = [UIColor grayColor];
-        self.gradientEndColor = [UIColor blackColor];
+    CGFloat labelHeight = 50;
+    return CGRectMake(0.0, CGRectGetHeight([self frame]) / 2 - labelHeight / 2, 
+                      CGRectGetWidth([self frame]), labelHeight);
+}
 
+- (void)addLabel
+{
+    UILabel *label = [[[UILabel alloc] initWithFrame:[self labelFrame]] autorelease];
+    
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont fontWithName:@"Helvetica Neue" size:24];
+    label.text = @"DrawnBubbleView";
+    label.textAlignment = UITextAlignmentCenter;
         
-        
-        [self.layer addSublayer:[self bubbleLayer]];
+    [self addSubview:label];
+}
+
+- (void)setupDefaultValuesAndLayers
+{
+    self.borderColor = [UIColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1.0];
+    self.gradientStartColor = [UIColor grayColor];
+    self.gradientEndColor = [UIColor blackColor];
+    
+    [self.layer addSublayer:[self bubbleLayer]];   
+    
+    [self addLabel];
+}
+
+- (id)initWithFrame:(CGRect)frame activationFrame:(CGRect)activationFrame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _activationFrame = activationFrame;
+        [self setupDefaultValuesAndLayers];
     }
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setupDefaultValuesAndLayers];
+    }
+    return self;
+}
+
+- (id)initWithHeight:(CGFloat)height activationFrame:(CGRect)activationFrame
+{
+    NSLog(@"Activation frame: %@", NSStringFromCGRect(activationFrame));
+    CGRect frame = CGRectMake(0.0, CGRectGetMaxY(activationFrame) + ACTIVATION_PADDING, [UIScreen mainScreen].bounds.size.width, height);
+    
+    return [self initWithFrame:frame activationFrame:activationFrame];
+}
+
 - (void)dealloc
 {
+    self.borderColor = nil;
+    self.gradientStartColor = nil;
+    self.gradientEndColor = nil;
+    
     [super dealloc];
 }
 

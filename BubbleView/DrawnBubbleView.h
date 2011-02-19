@@ -12,12 +12,13 @@
 @interface DrawnBubbleView : UIView {
 
 @private
-    UIColor *gradientStartColor;
-    UIColor *gradientEndColor;
-    UIColor *borderColor;
+    CGRect _activationFrame;
 }
 @property(nonatomic, retain) UIColor *gradientStartColor;
 @property(nonatomic, retain) UIColor *gradientEndColor;
 @property(nonatomic, retain) UIColor *borderColor;
+
+- (id)initWithFrame:(CGRect)frame activationFrame:(CGRect)activationFrame;
+- (id)initWithHeight:(CGFloat)height activationFrame:(CGRect)activationFrame;
 
 @end
