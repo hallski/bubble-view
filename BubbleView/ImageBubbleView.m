@@ -12,15 +12,6 @@
 
 @implementation ImageBubbleView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 - (UIImage *)bubbleImage
 {
     UIImage *image = [UIImage imageNamed:@"Bubble.png"];

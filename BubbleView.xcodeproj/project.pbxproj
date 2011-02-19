@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		403AF2D113104D470099BF22 /* DrawnBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 403AF2D013104D470099BF22 /* DrawnBubbleView.m */; };
 		40401D7A130ED39600D9CADE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40401D79130ED39600D9CADE /* UIKit.framework */; };
 		40401D7C130ED39600D9CADE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40401D7B130ED39600D9CADE /* Foundation.framework */; };
 		40401D7E130ED39600D9CADE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40401D7D130ED39600D9CADE /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		403AF2CF13104D470099BF22 /* DrawnBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawnBubbleView.h; sourceTree = "<group>"; };
+		403AF2D013104D470099BF22 /* DrawnBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawnBubbleView.m; sourceTree = "<group>"; };
 		40401D75130ED39600D9CADE /* BubbleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40401D79130ED39600D9CADE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		40401D7B130ED39600D9CADE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -36,7 +39,7 @@
 		40401D8E130ED39600D9CADE /* BubbleViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BubbleViewViewController.h; sourceTree = "<group>"; };
 		40401D8F130ED39600D9CADE /* BubbleViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BubbleViewViewController.m; sourceTree = "<group>"; };
 		40401D92130ED39600D9CADE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BubbleViewViewController.xib; sourceTree = "<group>"; };
-		40401D99130ED3CE00D9CADE /* ImageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = ImageBubbleView.h; sourceTree = "<group>"; };
+		40401D99130ED3CE00D9CADE /* ImageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBubbleView.h; sourceTree = "<group>"; };
 		40401D9A130ED3CE00D9CADE /* ImageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBubbleView.m; sourceTree = "<group>"; };
 		40401DA4130EDD9200D9CADE /* Bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bubble.png; sourceTree = "<group>"; };
 		40401DA6130EE0DE00D9CADE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,8 @@
 				40401DA4130EDD9200D9CADE /* Bubble.png */,
 				40401D99130ED3CE00D9CADE /* ImageBubbleView.h */,
 				40401D9A130ED3CE00D9CADE /* ImageBubbleView.m */,
+				403AF2CF13104D470099BF22 /* DrawnBubbleView.h */,
+				403AF2D013104D470099BF22 /* DrawnBubbleView.m */,
 				40401D80130ED39600D9CADE /* Supporting Files */,
 			);
 			path = BubbleView;
@@ -181,6 +186,7 @@
 				40401D8A130ED39600D9CADE /* BubbleViewAppDelegate.m in Sources */,
 				40401D90130ED39600D9CADE /* BubbleViewViewController.m in Sources */,
 				40401D9B130ED3CE00D9CADE /* ImageBubbleView.m in Sources */,
+				403AF2D113104D470099BF22 /* DrawnBubbleView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
