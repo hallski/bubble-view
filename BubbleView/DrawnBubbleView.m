@@ -152,26 +152,6 @@ CGFloat clamp(CGFloat value, CGFloat minValue, CGFloat maxValue)
     return bubbleLayer;
 }
 
-- (CGRect)labelFrame
-{
-    CGFloat labelHeight = 50;
-    return CGRectMake(0.0, CGRectGetHeight([self frame]) / 2 - labelHeight / 2, 
-                      CGRectGetWidth([self frame]), labelHeight);
-}
-
-- (void)addLabel
-{
-    UILabel *label = [[[UILabel alloc] initWithFrame:[self labelFrame]] autorelease];
-    
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.font = [UIFont fontWithName:@"Helvetica Neue" size:24];
-    label.text = @"DrawnBubbleView";
-    label.textAlignment = UITextAlignmentCenter;
-        
-    [self addSubview:label];
-}
-
 - (void)setupDefaultValuesAndLayers
 {
     self.borderColor = [UIColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1.0];
@@ -179,8 +159,6 @@ CGFloat clamp(CGFloat value, CGFloat minValue, CGFloat maxValue)
     self.gradientEndColor = [UIColor blackColor];
     
     [self.layer addSublayer:[self bubbleLayer]];   
-    
-    [self addLabel];
 }
 
 - (id)initWithFrame:(CGRect)frame activationFrame:(CGRect)activationFrame
