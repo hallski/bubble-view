@@ -16,6 +16,9 @@
 #define ARROW_POSITION 60
 
 @implementation DrawnBubbleView
+@synthesize gradientStartColor;
+@synthesize gradientEndColor;
+@synthesize borderColor;
 
 - (CGRect)bubbleFrame
 {
@@ -79,7 +82,8 @@
     
     UIBezierPath *path = [self bubblePathWithRoundedCornerRadius:10.0];
    
-    gradientLayer.colors = [NSArray arrayWithObjects:(id)[UIColor grayColor].CGColor, (id)[UIColor blackColor].CGColor, nil];
+    // Gradient colors from gray to black
+    gradientLayer.colors = [NSArray arrayWithObjects:(id)self.gradientStartColor.CGColor, (id)self.gradientEndColor.CGColor, nil];
     
     // Apply a mask to the gradient layer
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
@@ -89,8 +93,8 @@
     // Draw the border
     CAShapeLayer *outlineLayer = [CAShapeLayer layer];
     outlineLayer.path = path.CGPath;
-    outlineLayer.strokeColor = [UIColor blackColor].CGColor;
-    outlineLayer.lineWidth = 1.0;
+    outlineLayer.strokeColor = self.borderColor.CGColor;
+    outlineLayer.lineWidth = 1.5;
     outlineLayer.fillColor = [UIColor clearColor].CGColor;
 
     // And finally a shadow 
@@ -112,8 +116,12 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        // Initialization code
-        NSLog(@"Foo");
+        self.borderColor = [UIColor colorWithRed:0.15 green:0.15 blue:0.15 alpha:1.0];
+        self.gradientStartColor = [UIColor grayColor];
+        self.gradientEndColor = [UIColor blackColor];
+
+        
+        
         [self.layer addSublayer:[self bubbleLayer]];
     }
     return self;
