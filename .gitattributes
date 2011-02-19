@@ -1,0 +1,6 @@
+# Make objc diffs easier to read.
+*.m diff=objc
+*.h diff=objcheader
+
+# Make UTF-16 strings files diffable.
+*.strings diff=localizablestrings

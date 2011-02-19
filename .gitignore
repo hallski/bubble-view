@@ -1,0 +1,12 @@
+#### `.gitignore`
+# xcode noise
+build/*
+*.mode1v3
+*.pbxuser
+
+# xcode4
+*.xcuserdatad
+
+# osx noise
+.DS_Store
+profile
