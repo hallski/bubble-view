@@ -184,7 +184,6 @@ clamp(CGFloat value, CGFloat minValue, CGFloat maxValue)
 
 - (id)initWithHeight:(CGFloat)height activationFrame:(CGRect)activationFrame
 {
-    NSLog(@"Activation frame: %@", NSStringFromCGRect(activationFrame));
     CGRect frame = CGRectMake(0.0, CGRectGetMaxY(activationFrame) + ACTIVATION_PADDING, [UIScreen mainScreen].bounds.size.width, height);
     
     return [self initWithFrame:frame activationFrame:activationFrame];

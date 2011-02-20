@@ -54,26 +54,12 @@
                       CGRectGetWidth([bubbleView frame]), labelHeight);
 }
 
-- (void)addLabelToBubbleView:(UIView *)bubbleView
-{
-    UILabel *label = [[[UILabel alloc] initWithFrame:[self labelFrameForBubbleView:bubbleView]] autorelease];
-    
-    label.backgroundColor = [UIColor clearColor];
-    label.textColor = [UIColor whiteColor];
-    label.font = [UIFont fontWithName:@"Helvetica Neue" size:24];
-    label.text = @"DrawnBubbleView";
-    label.textAlignment = UITextAlignmentCenter;
-    
-    [bubbleView addSubview:label];
-}
-
 - (void)showBubbleViewWithActivationFrame:(CGRect)activationFrame
 {
     currentBubbleView = [[DrawnBubbleView alloc] initWithHeight:150
                                                 activationFrame:activationFrame];
     currentBubbleView.alpha = 0.0;
     [self.view addSubview:currentBubbleView];
-    [self addLabelToBubbleView:currentBubbleView];
    
     [UIView animateWithDuration:0.3
                      animations:^{
