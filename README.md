@@ -4,8 +4,8 @@ Example code for creating a popover bubble from either an image or drawing one y
 
 DrawnBubbleView
 ---------------
-![DrawnBubbleView](./screenshot-drawn-bubble.png)
+![DrawnBubbleView](https://github.com/m5h/bubble-view/raw/master/screenshot-drawn-bubble.png)
 
 ImageBubbleView
 ---------------
-![ImageBubbleView](./screenshot-image-bubble.png)
+![ImageBubbleView](https://github.com/m5h/bubble-view/raw/master/screenshot-image-bubble.png)
