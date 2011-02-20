@@ -17,7 +17,8 @@
 #define CORNER_RADIUS 10
 #define ACTIVATION_PADDING 0
 
-CGFloat clamp(CGFloat value, CGFloat minValue, CGFloat maxValue) 
+CGFloat 
+clamp(CGFloat value, CGFloat minValue, CGFloat maxValue) 
 {
     if (value < minValue) {
         return minValue;
@@ -85,10 +86,9 @@ CGFloat clamp(CGFloat value, CGFloat minValue, CGFloat maxValue)
     // Top right corner
     [path addArcWithCenter:CGPointMake(CGRectGetMaxX(bubbleFrame) - cornerRadius, 
                                        arrowMiddleBase.y + cornerRadius)
-                    radius:cornerRadius
-                startAngle:3 * M_PI / 2
-                  endAngle:2 * M_PI
+                    radius:cornerRadius startAngle:3 * M_PI / 2 endAngle:2 * M_PI
                  clockwise:YES];
+    
     [path addLineToPoint:CGPointMake(CGRectGetMaxX(bubbleFrame), 
                                      CGRectGetMaxY(bubbleFrame) - cornerRadius)];
     // Bottom right corner
@@ -105,6 +105,8 @@ CGFloat clamp(CGFloat value, CGFloat minValue, CGFloat maxValue)
                     radius:cornerRadius startAngle:M_PI / 2 endAngle:M_PI clockwise:YES];
     [path addLineToPoint:CGPointMake(CGRectGetMinX(bubbleFrame), 
                                      CGRectGetMinY(bubbleFrame) + cornerRadius)];
+    
+    // Top left corner
     [path addArcWithCenter:CGPointMake(CGRectGetMinX(bubbleFrame) + cornerRadius, 
                                        CGRectGetMinY(bubbleFrame) + cornerRadius)
                     radius:cornerRadius startAngle:M_PI endAngle:3 * M_PI / 2 clockwise:YES];
