@@ -51,7 +51,7 @@
     label.text = @"ImageBubbleView";
     label.textAlignment = UITextAlignmentCenter;
 
-    [self addSubview:label];
+ //   [self addSubview:label];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
