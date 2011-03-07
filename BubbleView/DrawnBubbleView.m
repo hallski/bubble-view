@@ -110,6 +110,7 @@ clamp(CGFloat value, CGFloat minValue, CGFloat maxValue)
     [path addArcWithCenter:CGPointMake(CGRectGetMinX(bubbleFrame) + cornerRadius, 
                                        CGRectGetMinY(bubbleFrame) + cornerRadius)
                     radius:cornerRadius startAngle:M_PI endAngle:3 * M_PI / 2 clockwise:YES];
+    
     [path closePath];
     
     return path;

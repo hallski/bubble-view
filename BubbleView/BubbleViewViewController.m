@@ -58,6 +58,7 @@
 {
     currentBubbleView = [[DrawnBubbleView alloc] initWithHeight:150
                                                 activationFrame:activationFrame];
+
     currentBubbleView.alpha = 0.0;
     [self.view addSubview:currentBubbleView];
    
